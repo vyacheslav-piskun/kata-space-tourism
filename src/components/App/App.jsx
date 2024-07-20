@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+
+import {FONT_TYPES, Typography} from "../Typography";
 
 import * as styles from './App.module.scss';
 
 const App = () => {
-	const [count, setCount] = useState(0);
-
-	useEffect(() => {
-		console.log('hello world')
-	})
 
 	return (
 		<div className={styles.wrapper}>
-			<div>App Component</div>
-			<div>{count}</div>
-			<button type="button" onClick={() => {setCount(prev => prev + 1)}}>CLICK</button>
+			<Typography type={FONT_TYPES.text_preset_1} htmlTag="p" center>Lorem</Typography>
+			<Typography type={FONT_TYPES.text_preset_2} htmlTag="p" center>Lorem</Typography>
+			<Typography type={FONT_TYPES.text_preset_3} htmlTag="p" center>Lorem ipsum dolor</Typography>
+			<Typography type={FONT_TYPES.text_preset_4} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
+			<Typography type={FONT_TYPES.text_preset_6} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
+			<Typography type={FONT_TYPES.text_preset_8} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
+			<Typography type={FONT_TYPES.text_preset_9} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
 		</div>
 	);
 };
