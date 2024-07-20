@@ -1,0 +1,49 @@
+@import "../../styles/mixins";
+
+.center {
+  text-align: center;
+}
+
+.text_preset_1 {
+  @include belleFairRegular;
+  font-size: 8rem;
+  line-height: 100%;
+}
+
+.text_preset_2 {
+  @include belleFairRegular;
+  font-size: 5.6rem;
+  line-height: 100%;
+}
+
+.text_preset_3 {
+  @include belleFairRegular;
+  font-size: 2.4rem;
+  line-height: 100%;
+}
+
+.text_preset_4 {
+  @include belleFairRegular;
+  font-size: 1.8rem;
+  line-height: 100%;
+}
+
+.text_preset_6 {
+  @include barlowCondensedRegular;
+  font-size: 1.6rem;
+  letter-spacing: 0.015rem;
+  line-height: 100%;
+}
+
+.text_preset_8 {
+  @include barlowCondensedRegular;
+  font-size: 1.4rem;
+  letter-spacing: 0.015rem;
+  line-height: 100%;
+}
+
+.text_preset_9 {
+  @include barlowRegular;
+  font-size: 1.5rem;
+  line-height: 180%;
+}
