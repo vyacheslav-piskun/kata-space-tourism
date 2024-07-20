@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import * as styles from './App.module.scss';
 
 const App = () => {
-
 	const [count, setCount] = useState(0);
+
 	useEffect(() => {
 		console.log('hello world')
 	})
+
 	return (
 		<div className={styles.wrapper}>
 			<div>App Component</div>

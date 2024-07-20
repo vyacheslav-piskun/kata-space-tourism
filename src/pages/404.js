@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 
 const NotFoundPage = () => {
   return (
@@ -10,4 +10,10 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>not found</title>
+  </>
+)
+

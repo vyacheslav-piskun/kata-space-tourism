@@ -1,15 +1,16 @@
-import * as styles from './index.module.scss';
-import * as React from "react"
+import React from "react"
+
 import App from "../components/App";
 
 const IndexPage = () => {
-  return (
-    <div className={styles.wrapper}>
-      <App />
-    </div>
-  )
+  return <App />
 }
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <title>Home Page</title>
+  </>
+)
