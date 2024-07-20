@@ -1,10 +1,19 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+html, body, p, h1, h2, h3, div, span, image {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --c-snow: #fff;
+  --c-main: #0B0D17;
+  --c-main-light: #D0D6F9;
+}
+
 html, body {
   min-height: 100svh;
-  background-color: aqua;
 }
