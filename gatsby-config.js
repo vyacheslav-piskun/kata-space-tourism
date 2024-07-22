@@ -6,5 +6,6 @@ module.exports = {
     title: `Space Tourism Pages`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-sass"]
+  plugins: ["gatsby-plugin-sass"],
+  pathPrefix: "/kata-space-tourism",
 };
