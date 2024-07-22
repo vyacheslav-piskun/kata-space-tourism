@@ -8,11 +8,7 @@ const Layout = ({ children }) => {
 
 	const childrenArray = React.Children.toArray(children);
 	const currentChild = childrenArray.find(child => {
-		
-		console.log('path ->', child.props.path);
-		console.log('location.pathname', location.pathname);
-		console.log('withPrefix(location.pathname)', withPrefix(location.pathname));
-		
+
 		return withPrefix(child.props.path) === location.pathname
 	});
 
