@@ -1,20 +1,28 @@
 import React from 'react';
 
-import {FONT_TYPES, Typography} from "../Typography";
+import { FONT_TYPES, Typography } from "../Typography";
+import Header from "../Header";
 
 import * as styles from './App.module.scss';
 
 const App = () => {
-
 	return (
 		<div className={styles.wrapper}>
-			<Typography type={FONT_TYPES.text_preset_1} htmlTag="p" center>Lorem</Typography>
-			<Typography type={FONT_TYPES.text_preset_2} htmlTag="p" center>Lorem</Typography>
-			<Typography type={FONT_TYPES.text_preset_3} htmlTag="p" center>Lorem ipsum dolor</Typography>
-			<Typography type={FONT_TYPES.text_preset_4} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
-			<Typography type={FONT_TYPES.text_preset_6} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
-			<Typography type={FONT_TYPES.text_preset_8} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
-			<Typography type={FONT_TYPES.text_preset_9} htmlTag="p" center>Lorem ipsum dolor sit amet.</Typography>
+			<Header />
+			<div className={styles.container}>
+				<p className={styles.headline}>
+					<Typography type={FONT_TYPES.text_preset_6} center className={styles.headlineIntro}>
+						SO, YOU WANT TO TRAVEL TO
+					</Typography>
+					<Typography type={FONT_TYPES.text_preset_1} center className={styles.headlinePoint}>SPACE</Typography>
+				</p>
+				<Typography type={FONT_TYPES.text_preset_9} htmlTag="p" center className={styles.description}>
+					Let’s face it; if you want to go to space, you might as well genuinely go to
+					outer space and not hover kind of on the edge of it. Well sit back, and relax because
+					we’ll give you a truly out of this world experience!
+				</Typography>
+
+			</div>
 		</div>
 	);
 };
