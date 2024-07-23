@@ -1,7 +1,29 @@
 .wrapper {
   height: 8.8rem;
+  padding: 0 2.4rem;
   position: sticky;
   top: 0;
-  background-color: black;
-  opacity: 0.3
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+}
+
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.4rem;
+  height: 2.1rem;
+}
+
+.burgerMenu span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: var(--c-main-light);
 }
