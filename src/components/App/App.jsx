@@ -4,13 +4,16 @@ import {Link} from "gatsby";
 import { FONT_TYPES, Typography } from "../Typography";
 import Header from "../Header";
 
+import homeBgImage from '../../assets/home/background-home-mobile.webp';
+
 import * as styles from './App.module.scss';
 
 const App = () => {
 
 	return (
 		<div className={styles.wrapper} >
-			<Header />
+			<Header className={styles.header} />
+				<img src={homeBgImage} alt="planet" className={styles.bgImage}/>
 			<div className={styles.container}>
 				<p className={styles.headline}>
 					<Typography type={FONT_TYPES.text_preset_6} center className={styles.headlineIntro}>
@@ -27,16 +30,6 @@ const App = () => {
 					<Link to="/destination" className={styles.link}>
 						<Typography type={FONT_TYPES.text_preset_4} className={styles.linkText}>
 							explore
-						</Typography>
-					</Link>
-					<Link to="/crew" className={styles.link}>
-						<Typography type={FONT_TYPES.text_preset_4} className={styles.linkText}>
-							crew
-						</Typography>
-					</Link>
-					<Link to="/technology" className={styles.link}>
-						<Typography type={FONT_TYPES.text_preset_4} className={styles.linkText}>
-							technology
 						</Typography>
 					</Link>
 				</div>

@@ -1,10 +1,11 @@
 import React from 'react';
+import cx from 'classnames';
 
 import * as styles from './Header.module.scss';
 
-const Header = () => {
+const Header = ({ className = '' }) => {
 	return (
-		<div className={styles.wrapper}>
+		<div className={cx(styles.wrapper, className)}>
 			<div>Header Component</div>
 		</div>
 	);
