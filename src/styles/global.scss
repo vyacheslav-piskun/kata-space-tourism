@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
 
-html, body, p, h1, h2, h3, div, span, image, a {
+html, body, p, h1, h2, h3, div, span, image, a, button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,9 +13,14 @@ a {
 }
 
 a,
-button,
-label {
+button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  border: none;
+  background: transparent;
+  outline: none;
 }
 
 :root {
@@ -39,15 +44,3 @@ html, body {
     font-size: 10px;
   }
 }
-//
-//body::before {
-//  content: "";
-//  background: url("../assets/home/mobile_home_full.png") no-repeat;
-//  background-size: cover;
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  bottom: 0;
-//  right: 0;
-//  opacity: 0.6;
-//}
