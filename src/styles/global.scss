@@ -15,6 +15,7 @@ a {
 a,
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 button {
@@ -38,8 +39,8 @@ html, body {
   min-height: 100svh;
   position: relative;
   font-size: 9px;
-  overflow-x: hidden;
   background-color: black;
+  overflow-x: hidden;
   @media (min-width: 375px) {
     font-size: 10px;
   }
