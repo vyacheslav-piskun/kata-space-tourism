@@ -13,7 +13,7 @@ const App = () => {
 	return (
 		<div className={styles.wrapper} >
 			<Header className={styles.header} />
-				<img src={homeBgImage} alt="planet" className={styles.bgImage}/>
+			<img src={homeBgImage} alt="planet" className={styles.bgImage}/>
 			<div className={styles.container}>
 				<p className={styles.headline}>
 					<Typography type={FONT_TYPES.text_preset_6} center className={styles.headlineIntro}>
