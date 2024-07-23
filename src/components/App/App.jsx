@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "gatsby";
 
 import { FONT_TYPES, Typography } from "../Typography";
+import NavMenu from "../NavMenu";
 import Header from "../Header";
 
 import homeBgImage from '../../assets/home/background-home-mobile.webp';
@@ -9,10 +10,12 @@ import homeBgImage from '../../assets/home/background-home-mobile.webp';
 import * as styles from './App.module.scss';
 
 const App = () => {
+	const [opened, setOpened] = useState(false);
 
 	return (
 		<div className={styles.wrapper} >
-			<Header className={styles.header} />
+			<Header opened={opened} setOpened={setOpened} />
+			<NavMenu opened={opened} />
 			<img src={homeBgImage} alt="planet" className={styles.bgImage}/>
 			<div className={styles.container}>
 				<p className={styles.headline}>

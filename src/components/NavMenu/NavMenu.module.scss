@@ -1,0 +1,26 @@
+.wrapper {
+  height: 100%;
+  width: 25.4rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 8;
+  background-color: var(--c-main-opacity-light);
+  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
+  color: var(--c-main-light);
+  transform: translateX(120%);
+}
+
+.nav {
+  &List {
+    margin-top: 13.2rem;
+  }
+  &Item {
+
+  }
+
+  &Link {
+    color: inherit;
+  }
+}

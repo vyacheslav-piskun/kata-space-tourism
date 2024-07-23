@@ -1,12 +1,11 @@
-import React, {memo, useState} from 'react';
 import cx from 'classnames';
+import React, {memo, useState} from 'react';
 
 import logoIcon from '../../assets/shared/logo.svg';
 
 import * as styles from './Header.module.scss';
 
-const Header = ({ className = '' }) => {
-	const [opened, setOpened] = useState(false);
+const Header = ({ className = '', opened = false, setOpened =(_) => {} }) => {
 	const [animated, setAnimated] = useState(false);
 
 	const toggleMenu = () => {

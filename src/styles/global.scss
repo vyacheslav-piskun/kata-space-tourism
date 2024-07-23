@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
 
-html, body, p, h1, h2, h3, div, span, image, a, button {
+html, body, p, h1, h2, h3, div, span, image, a, button, ul, li, nav {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,6 +18,10 @@ button {
   cursor: pointer;
 }
 
+ul, li {
+  list-style: none;
+}
+
 button {
   border: none;
   background: transparent;
@@ -28,6 +32,7 @@ button {
   --c-snow: #fff;
   --c-snow-opacity-light: rgba(255, 255, 255, 0.1);
   --c-main: #0B0D17;
+  --c-main-opacity-light: rgba(11, 13, 23, 0.15);
   --c-main-light: #D0D6F9;
 
   --tr-base: 0.2s;
