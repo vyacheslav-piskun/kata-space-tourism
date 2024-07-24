@@ -3,6 +3,8 @@ import { useTransition, animated } from '@react-spring/web';
 import { useLocation } from '@gatsbyjs/reach-router';
 import {withPrefix} from "gatsby";
 
+import * as styles from './Layout.module.scss'
+
 const Layout = ({ children }) => {
 	const location = useLocation();
 
@@ -24,7 +26,7 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			{transitions((style, item) => (
-				<animated.div style={style}>
+				<animated.div style={style} className={styles.wrapper}>
 					{item}
 				</animated.div>
 			))}

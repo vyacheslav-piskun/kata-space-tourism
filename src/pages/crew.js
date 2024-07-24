@@ -1,18 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
-import GeneralWrapper from "../components/GeneralWrapper";
+import Crew from "../components/routes/Crew";
 
-const CrewPage = () => (
-	<GeneralWrapper>
-		<h1>Crew Page</h1>
-		<br />
-		<br />
-		<Link to="/">
-			<button>Go to Home</button>
-		</Link>
-	</GeneralWrapper>
-);
+const CrewPage = () => <Crew />;
 
 CrewPage.path = '/crew'
 

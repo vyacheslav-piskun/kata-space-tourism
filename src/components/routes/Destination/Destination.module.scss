@@ -1,0 +1,40 @@
+.wrapper {
+  width: 100%;
+  min-height: 100svh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.bgImage {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  flex-grow: 1;
+  padding: calc(8.8rem + 2.4rem) 2.4rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.headline {
+  margin-bottom: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &Destination {
+    display: block;
+    color: var(--c-snow);
+  }
+}
+
+.description {
+  color: var(--c-main-light);
+}

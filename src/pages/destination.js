@@ -2,17 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import GeneralWrapper from "../components/GeneralWrapper";
+import Destination from "../components/routes/Destination";
 
-const DestinationPage = () => (
-	<GeneralWrapper>
-		<h1>Destination Page</h1>
-		<br />
-		<br />
-		<Link to="/">
-			<button>Go to Home</button>
-		</Link>
-	</GeneralWrapper>
-);
+const DestinationPage = () => <Destination />;
 
 DestinationPage.path = '/destination'
 

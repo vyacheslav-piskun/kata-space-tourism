@@ -1,10 +1,8 @@
 import React from "react"
 
-import App from "../components/App";
+import Home from "../components/routes/Home";
 
-const IndexPage = () => {
-  return <App />
-}
+const IndexPage = () => <Home />
 
 export default IndexPage
 
