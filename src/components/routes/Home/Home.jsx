@@ -3,13 +3,14 @@ import {Link} from "gatsby";
 
 import {FONT_TYPES, Typography} from "../../Typography";
 
+import bgImage from "../../../assets/home/background-home-mobile.webp";
+
 import * as styles from './Home.module.scss';
-import homeBgImage from "../../../assets/home/background-home-mobile.webp";
 
 const Home = () => {
 	return (
 		<div className={styles.wrapper}>
-			<img src={homeBgImage} alt="planet" className={styles.bgImage}/>
+			<img src={bgImage} alt="planet" className={styles.bgImage}/>
 			<div className={styles.container}>
 				<p className={styles.headline}>
 					<Typography type={FONT_TYPES.text_preset_6} center className={styles.headlineIntro}>

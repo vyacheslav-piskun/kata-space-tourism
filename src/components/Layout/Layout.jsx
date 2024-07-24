@@ -4,6 +4,7 @@ import { useLocation } from '@gatsbyjs/reach-router';
 import {withPrefix} from "gatsby";
 
 import * as styles from './Layout.module.scss'
+import GeneralWrapper from "../GeneralWrapper";
 
 const Layout = ({ children }) => {
 	const location = useLocation();
@@ -24,13 +25,13 @@ const Layout = ({ children }) => {
 
 
 	return (
-		<>
+		<GeneralWrapper>
 			{transitions((style, item) => (
 				<animated.div style={style} className={styles.wrapper}>
 					{item}
 				</animated.div>
 			))}
-		</>
+		</GeneralWrapper>
 	);
 };
 

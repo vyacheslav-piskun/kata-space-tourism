@@ -6,7 +6,7 @@ import {FONT_TYPES, Typography} from "../Typography";
 
 import * as styles from './NavMenu.module.scss';
 
-const NavMenu = ({ opened= false }) => {
+const NavMenu = ({ opened= false, onClose = () => {} }) => {
 	const transitions = useTransition(opened, {
 		from: { transform: 'translateX(120%)'},
 		enter: { transform: 'translateX(0%)'},
@@ -19,14 +19,33 @@ const NavMenu = ({ opened= false }) => {
 			item && (
 				<animated.nav style={style} className={styles.wrapper}>
 					<ul className={ styles.navList}>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li" className={styles.navItem}>
-							<Link to='/destination' className={styles.navLink}>Destination</Link>
+						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
+							<Link
+								onClick={onClose}
+								to='/'
+								className={styles.navLink}
+							>Home</Link>
 						</Typography>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li" className={styles.navItem}>
-							<Link to='/crew' className={styles.navLink}>Crew</Link>
+						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
+							<Link
+								onClick={onClose}
+								to='/destination'
+								className={styles.navLink}
+							>Destination</Link>
 						</Typography>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li" className={styles.navItem}>
-							<Link to='/technology' className={styles.navLink}>Technology</Link>
+						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
+							<Link
+								onClick={onClose}
+								to='/crew'
+								className={styles.navLink}
+							>Crew</Link>
+						</Typography>
+						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
+							<Link
+								onClick={onClose}
+								to='/technology'
+								className={styles.navLink}
+							>Technology</Link>
 						</Typography>
 					</ul>
 				</animated.nav>

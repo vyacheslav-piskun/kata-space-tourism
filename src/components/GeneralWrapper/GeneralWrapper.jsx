@@ -1,12 +1,20 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 
-import * as styles from './GeneralWrapper.module.scss';
+import Header from "../Header/Header";
+import NavMenu from "../NavMenu/NavMenu";
 
 const GeneralWrapper = ({children}) => {
+	const [opened, setOpened] = useState(false);
+	const handleClosePopup = useCallback(() => {
+		setOpened(false)
+	}, []);
+
 	return (
-		<div className={styles.wrapper}>
+		<>
+			<Header opened={opened} setOpened={setOpened} />
+			<NavMenu opened={opened} onClose={handleClosePopup} />
 			{children}
-		</div>
+		</>
 	);
 };
 
