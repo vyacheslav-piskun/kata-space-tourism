@@ -1,7 +1,6 @@
 import React from 'react';
 import {withPrefix} from "gatsby";
 
-
 const TestRouteTemplate = ({ pageContext }) => {
 	const { test_route } = pageContext;
 

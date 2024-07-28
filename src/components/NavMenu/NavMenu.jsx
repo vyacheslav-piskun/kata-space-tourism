@@ -29,9 +29,16 @@ const NavMenu = ({ opened= false, onClose = () => {} }) => {
 						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
 							<Link
 								onClick={onClose}
-								to='/destination'
+								to='/test_route/moon'
 								className={styles.navLink}
-							>Destination</Link>
+							>Destination - Moon</Link>
+						</Typography>
+						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
+							<Link
+								onClick={onClose}
+								to='/test_route/europa'
+								className={styles.navLink}
+							>Destination - Europa</Link>
 						</Typography>
 						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
 							<Link
