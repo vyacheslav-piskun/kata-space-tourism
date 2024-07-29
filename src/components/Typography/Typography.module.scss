@@ -36,6 +36,18 @@
   letter-spacing: 0.015rem;
 }
 
+.text_preset_8_second {
+  @include barlowCondensedRegular;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+}
+
+.text_preset_8_second_bold {
+  @include barlowCondensedBold;
+  font-size: 1.6rem;
+  letter-spacing: 0.27rem;
+}
+
 .text_preset_9 {
   @include barlowRegular;
   font-size: 1.5rem;

@@ -12,6 +12,8 @@ export const FONT_TYPES = {
 	text_preset_6: 'text_preset_6',
 	text_preset_7: 'text_preset_7',
 	text_preset_8: 'text_preset_8',
+	text_preset_8_second: 'text_preset_8_second',
+	text_preset_8_second_bold: 'text_preset_8_second_bold',
 	text_preset_9: 'text_preset_9',
 }
 

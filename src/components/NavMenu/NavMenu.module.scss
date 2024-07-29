@@ -15,9 +15,29 @@
 .nav {
   &List {
     margin-top: 13.2rem;
+    padding-left: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
   }
 
   &Link {
+    position: relative;
+    display: flex;
+    text-transform: uppercase;
     color: inherit;
+    &.active::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 0.3rem;
+      background-color: var(--c-main-light);
+    }
+  }
+
+  &Num {
+    margin-right: 1.2rem;
   }
 }

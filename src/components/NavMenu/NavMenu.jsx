@@ -1,12 +1,44 @@
-import {Link} from "gatsby";
+import cx from 'classnames';
 import React, {memo} from 'react';
+import {Link, withPrefix} from "gatsby";
+import {useLocation} from "@gatsbyjs/reach-router";
 import { useTransition, animated, easings } from '@react-spring/web';
 
 import {FONT_TYPES, Typography} from "../Typography";
 
 import * as styles from './NavMenu.module.scss';
 
+const NAV_CONFIG = [
+	{
+		id: 1,
+		route: '/',
+		routeText: 'Home'
+	},
+	{
+		id: 2,
+		route: '/test_route/moon/',
+		routeText: 'Moon'
+	},
+	{
+		id: 3,
+		route: '/test_route/europa/',
+		routeText: 'Europa'
+	},
+	{
+		id: 4,
+		route: '/crew/',
+		routeText: 'Crew'
+	},
+	{
+		id: 5,
+		route: '/technology/',
+		routeText: 'Technology'
+	},
+]
+
 const NavMenu = ({ opened= false, onClose = () => {} }) => {
+	const { pathname } = useLocation();
+
 	const transitions = useTransition(opened, {
 		from: { transform: 'translateX(120%)'},
 		enter: { transform: 'translateX(0%)'},
@@ -18,42 +50,29 @@ const NavMenu = ({ opened= false, onClose = () => {} }) => {
 		(style, item) =>
 			item && (
 				<animated.nav style={style} className={styles.wrapper}>
-					<ul className={ styles.navList}>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
-							<Link
-								onClick={onClose}
-								to='/'
-								className={styles.navLink}
-							>Home</Link>
-						</Typography>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
-							<Link
-								onClick={onClose}
-								to='/test_route/moon'
-								className={styles.navLink}
-							>Destination - Moon</Link>
-						</Typography>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
-							<Link
-								onClick={onClose}
-								to='/test_route/europa'
-								className={styles.navLink}
-							>Destination - Europa</Link>
-						</Typography>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
-							<Link
-								onClick={onClose}
-								to='/crew'
-								className={styles.navLink}
-							>Crew</Link>
-						</Typography>
-						<Typography type={FONT_TYPES.text_preset_8} htmlTag="li">
-							<Link
-								onClick={onClose}
-								to='/technology'
-								className={styles.navLink}
-							>Technology</Link>
-						</Typography>
+					<ul className={styles.navList}>
+						{NAV_CONFIG.map(({id, route, routeText}, index) => (
+							<li key={id}>
+								<Link
+									onClick={onClose}
+									to={route}
+									className={cx(
+										styles.navLink,
+										{[styles.active]: pathname === withPrefix(route)}
+									)}
+								>
+									<Typography
+										type={FONT_TYPES.text_preset_8_second_bold}
+										className={styles.navNum}
+									>
+										{`0${index}`}
+									</Typography>
+									<Typography type={FONT_TYPES.text_preset_8_second}>
+										{routeText}
+									</Typography>
+								</Link>
+							</li>
+						))}
 					</ul>
 				</animated.nav>
 			)
