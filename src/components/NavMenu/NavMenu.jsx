@@ -14,8 +14,12 @@ const NAV_CONFIG = [
 		routeText: 'Home'
 	},
 	{
-		route: '/destination/',
+		route: '/destination/moon/',
 		routeText: 'Destination',
+	},
+	{
+		route: '/destination/europa/',
+		routeText: 'Destination - Europa'
 	},
 	{
 		route: '/crew/',
@@ -24,14 +28,6 @@ const NAV_CONFIG = [
 	{
 		route: '/technology/',
 		routeText: 'Technology'
-	},
-	{
-		route: '/test_route/moon/',
-		routeText: 'Moon'
-	},
-	{
-		route: '/test_route/europa/',
-		routeText: 'Europa'
 	},
 ]
 

@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 		from: { opacity: 0, position: 'absolute' },
 		enter: { opacity: 1, position: 'absolute' },
 		leave: { opacity: 0, position: 'absolute' },
-		config: { duration: 300 },
+		config: { duration: 2000 },
 	});
 
 

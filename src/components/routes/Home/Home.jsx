@@ -24,7 +24,7 @@ const Home = () => {
 					we’ll give you a truly out of this world experience!
 				</Typography>
 				<div className={styles.linkWrapper}>
-					<Link to="/destination" className={styles.link}>
+					<Link to="/destination/moon" className={styles.link}>
 						<Typography type={FONT_TYPES.text_preset_4} className={styles.linkText}>
 							explore
 						</Typography>
