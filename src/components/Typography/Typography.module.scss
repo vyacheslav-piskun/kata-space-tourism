@@ -30,6 +30,17 @@
   letter-spacing: 0.15em;
 }
 
+.text_preset_6_second {
+  @include belleFairRegular;
+  font-size: 2.8rem;
+}
+
+.text_preset_7_second {
+  @include barlowCondensedRegular;
+  font-size: 1.4rem;
+  letter-spacing: 0.02rem;
+}
+
 .text_preset_8 {
   @include barlowCondensedRegular;
   font-size: 1.4rem;
