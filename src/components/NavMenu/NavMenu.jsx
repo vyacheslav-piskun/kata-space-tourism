@@ -10,29 +10,28 @@ import * as styles from './NavMenu.module.scss';
 
 const NAV_CONFIG = [
 	{
-		id: 1,
 		route: '/',
 		routeText: 'Home'
 	},
 	{
-		id: 2,
-		route: '/test_route/moon/',
-		routeText: 'Moon'
+		route: '/destination/',
+		routeText: 'Destination',
 	},
 	{
-		id: 3,
-		route: '/test_route/europa/',
-		routeText: 'Europa'
-	},
-	{
-		id: 4,
 		route: '/crew/',
 		routeText: 'Crew'
 	},
 	{
-		id: 5,
 		route: '/technology/',
 		routeText: 'Technology'
+	},
+	{
+		route: '/test_route/moon/',
+		routeText: 'Moon'
+	},
+	{
+		route: '/test_route/europa/',
+		routeText: 'Europa'
 	},
 ]
 
@@ -52,7 +51,7 @@ const NavMenu = ({ opened= false, onClose = () => {} }) => {
 				<animated.nav style={style} className={styles.wrapper}>
 					<ul className={styles.navList}>
 						{NAV_CONFIG.map(({id, route, routeText}, index) => (
-							<li key={id}>
+							<li key={route}>
 								<Link
 									onClick={onClose}
 									to={route}
